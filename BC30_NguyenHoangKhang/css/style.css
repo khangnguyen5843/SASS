@@ -1,0 +1,515 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.header {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.header .container {
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 576px) {
+  .header .container {
+    justify-content: flex-start;
+  }
+}
+.header .container .toggle {
+  font-size: 25px;
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  .header .container .toggle {
+    display: inline-block;
+    margin: 0;
+  }
+}
+.header .container .logo {
+  margin: 0;
+}
+.header .container .menu {
+  margin-right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .container .menu .navbar a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+  display: inline-block;
+  padding: 5px 15px;
+  margin-right: 25px;
+  position: relative;
+}
+.header .container .menu .navbar a:hover {
+  color: #b61984;
+}
+.header .container .menu .navbar a:hover::after {
+  display: block;
+  transform: scale(1.5, 1.5);
+  transition: 0.5s ease all;
+}
+.header .container .menu .navbar a::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  display: block;
+  background-color: #b61984;
+  border-radius: 50%;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -4px;
+  display: none;
+  transform: scale(1, 0);
+  z-index: 5;
+}
+.header .container .menu .btnHeader {
+  background-color: #b61984;
+  border: #b61984 solid 1px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  padding: 10px 20px;
+  margin-right: 20px;
+  transition: all 0.3s linear;
+}
+.header .container .menu .btnHeader:hover {
+  background-color: #fff;
+  color: #b61984;
+}
+.header .container .menu .social-media a {
+  color: #000;
+}
+.header .container .menu .social-media a i {
+  font-size: 13px;
+  margin: 0 3px;
+}
+.header .container .menu .social-media a i:hover {
+  color: #b61984;
+}
+@media screen and (max-width: 576px) {
+  .header .container .menu {
+    display: none;
+  }
+}
+
+.carousel {
+  background: url(../../Images/yellow_top_wave_01.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.carousel .container {
+  padding: 100px 40px 15px 40px;
+}
+.carousel .container .row {
+  align-items: center;
+}
+@media screen and (max-width: 576px) {
+  .carousel .container .row {
+    display: block;
+  }
+}
+.carousel .container .row .col {
+  width: 50%;
+}
+.carousel .container .row .col .item {
+  padding: 30px 5px;
+}
+.carousel .container .row .col .item .text {
+  -webkit-animation: fadeInLeft 1s;
+          animation: fadeInLeft 1s;
+}
+.carousel .container .row .col .item .text h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #b61984;
+}
+.carousel .container .row .col .item .text h1 {
+  font-size: 60px;
+  font-weight: 600;
+  color: #000;
+}
+.carousel .container .row .col .item img {
+  -webkit-animation: fadeInRight 1s;
+          animation: fadeInRight 1s;
+  width: 100%;
+}
+@media screen and (max-width: 576px) {
+  .carousel .container .row .col {
+    width: 100%;
+  }
+}
+.carousel .bottom-cover-img img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.our-teacher {
+  background-color: #dcd1f3;
+  background-image: url(../../Images/Wave_White_bottom_right_shape_01.png);
+  background-position: bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.our-teacher .container {
+  padding: 0 40px;
+}
+.our-teacher .container .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.our-teacher .container .row .col {
+  width: 25%;
+  padding: 0;
+  margin: 20px;
+}
+.our-teacher .container .row .col .item-0 {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.our-teacher .container .row .col .item-1 {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.our-teacher .container .row .col .item-2 {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.our-teacher .container .row .col .item-3 {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.our-teacher .container .row .col .item-4 {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.our-teacher .container .row .col .item {
+  border-radius: 10px;
+}
+.our-teacher .container .row .col .item:hover {
+  box-shadow: 0px 15px 10px 0px #abb8c3;
+  transition: all 0.3s;
+}
+.our-teacher .container .row .col .item .top {
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+.our-teacher .container .row .col .item .top img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  transform: scale(1, 1);
+}
+.our-teacher .container .row .col .item .top img:hover {
+  transform: scale(1.05, 1.05);
+  transition: all 0.5s;
+}
+.our-teacher .container .row .col .item .bottom {
+  background-color: #fff;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+  padding-bottom: 20px;
+}
+.our-teacher .container .row .col .item .bottom span {
+  font-size: 11px;
+  font-weight: 600;
+  color: #b61984;
+  display: inline-block;
+  margin-top: 25px;
+}
+.our-teacher .container .row .col .item .bottom h5 {
+  font-weight: 600;
+  margin-top: 10px;
+}
+.our-teacher .container .row .col .item .bottom p {
+  font-size: 15px;
+  margin: 15px 20px;
+}
+@media screen and (max-width: 576px) {
+  .our-teacher .container .row .col {
+    width: 50%;
+  }
+}
+
+.register {
+  background-image: url(../../Images/accent_bottom_wave_01.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.register .container {
+  padding: 15px 40px;
+}
+.register .container .row {
+  padding-top: 80px;
+}
+.register .container .row .col {
+  width: 50%;
+}
+.register .container .row .col .item img {
+  -webkit-animation: fadeInLeft 1s;
+          animation: fadeInLeft 1s;
+  width: 100%;
+  margin: 25px 0 25px 30px;
+}
+.register .container .row .col .item form {
+  background-color: #fff;
+  width: 75%;
+  box-shadow: -5px 0px 10px 0px #abb8c3;
+  border-radius: 10px;
+  padding-bottom: 80px;
+  -webkit-animation: fadeInRight 1s;
+          animation: fadeInRight 1s;
+}
+.register .container .row .col .item form .top h1 {
+  text-align: center;
+  font-weight: 600;
+  padding-top: 30px;
+}
+.register .container .row .col .item form .boby .row {
+  padding-top: 50px;
+}
+.register .container .row .col .item form .boby .row .btnName, .register .container .row .col .item form .boby .row .btnEmail {
+  border: solid 1px #abb8c3;
+  border-radius: 25px;
+  padding: 10px;
+  width: 37%;
+}
+.register .container .row .col .item form .boby .row .btnName input, .register .container .row .col .item form .boby .row .btnEmail input {
+  width: 70%;
+  border: none;
+  margin-left: 10px;
+  font-size: 13px;
+}
+.register .container .row .col .item form .boby .row .btnName {
+  margin-left: 50px;
+}
+.register .container .row .col .item form .boby .row .btnEmail {
+  margin-right: 50px;
+}
+.register .container .row .col .item form .boby .row .btnDetail {
+  border: solid 1px #abb8c3;
+  border-radius: 25px;
+  padding: 10px;
+  width: 100%;
+  margin: 0 50px;
+}
+.register .container .row .col .item form .boby .row .btnDetail select, .register .container .row .col .item form .boby .row .btnDetail textarea {
+  width: 90%;
+  border: none;
+  margin-left: 10px;
+  font-size: 13px;
+}
+.register .container .row .col .item form .boby .row .btnDetail .fa-message {
+  transform: translateY(-80px);
+}
+.register .container .row .col .item form .boby i {
+  color: #b61984;
+}
+.register .container .row .col .item form .bottom {
+  margin: 50px 50px 0 50px;
+}
+.register .container .row .col .item form .bottom button {
+  background-color: #b61984;
+  border: #b61984 solid 1px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  padding: 10px 50px;
+}
+.register .container .row .col .item form .bottom button:hover {
+  background-color: #fff;
+  color: #b61984;
+}
+
+.footer {
+  background-image: url(../../Images/footer_background.jpg);
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #aa017e;
+}
+.footer .container {
+  padding: 15px 45px;
+}
+.footer .container .row {
+  color: #fff;
+  padding-top: 100px;
+  padding-bottom: 110px;
+}
+.footer .container .row .col .item-0 {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.footer .container .row .col .item-1 {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.footer .container .row .col .item-2 {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.footer .container .row .col .item-3 {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.footer .container .row .col .item-4 {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.footer .container .row .col .item h4 {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.footer .container .row .col .item .contact-row span {
+  margin-left: 10px;
+}
+.footer .container .row .col .item .social-media {
+  margin-top: 30px;
+}
+.footer .container .row .col .item .social-media a i {
+  color: #fff;
+  margin-right: 15px;
+}
+.footer .container .row .col .item .social-media a i:hover {
+  color: #000;
+}
+.footer .container .row .col .item ul {
+  list-style: none;
+}
+.footer .container .row .col .item ul a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer .container .row .col .item ul a:hover {
+  opacity: 0.7;
+}
+.footer .container .row .col .item form input {
+  color: #fff;
+  border-radius: 25px;
+  border: solid 1px #abb8c3;
+  font-size: 15px;
+  text-align: center;
+  padding: 10px 30px;
+  margin-bottom: 10px;
+}
+.footer .container .row .col .item form .btnSubmit {
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: #fff solid 1px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+  padding: 10px 80px;
+}
+.footer .container .row .col .item form .btnSubmit:hover {
+  background-color: #aa017e;
+  color: #fff;
+}
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeInRight {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,52 @@
+// Text-color:
+$c1-text: #000;
+$c2-text: #fff;
+$c3-text: #b61984;
+
+// Font-size:
+$fz-text-ssx:11px;
+$fz-text-sx: 13px;
+$fz-text-sm: 15px;
+$fz-text-md: 16px;
+$fz-text-lg: 18px;
+$fz-text-1xl: 20px;
+$fz-text-2xl: 22px;
+$fz-text-3xl: 25px;
+$fz-text-4xl: 60px;
+
+// Font-weight
+$fw-text-thin: 100;
+$fw-text-light: 300;
+$fw-text-semiBold: 600;
+$fw-text-bold: 900;
+
+// Background-color:
+$c1-bg: #b61984;
+$c2-bg: #fff;
+$c3-bg: #dcd1f3;
+$c4-bg: #abb8c3;
+$c5-bg: #aa017e;
+
+// Border
+$c1-border: #b61984;
+$c2-border: #fff;
+$c3-border: #abb8c3;
+
+// Mixin
+@mixin text ($fz, $fw, $c){
+    font-size: $fz;
+    font-weight: $fw;
+    color: $c;
+}
+
+@mixin button ($bg, $b, $br, $fz, $fw, $c, $pd, $bg-hover, $c-hover) {
+    background-color: $bg;
+    border: $b;
+    border-radius: $br;
+    @include text($fz, $fw, $c);
+    padding: $pd;
+    &:hover{
+        background-color: $bg-hover;
+        color: $c-hover;
+    }
+}

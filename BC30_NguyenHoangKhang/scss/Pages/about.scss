@@ -1,0 +1,410 @@
+@import '../Base/base';
+
+@import '../Themes/variable';
+
+.header{
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    .container{
+        padding: 15px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width: 992px) {
+            justify-content: flex-start;
+        }
+        .toggle{
+            font-size: $fz-text-3xl;
+            display: none;
+            @media screen and (max-width: 992px) {
+                display: inline-block;
+                margin: 0;
+            }
+        }
+        .logo{
+            margin: 0;
+        }
+        .menu{
+            margin-right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .navbar{
+                a{
+                    text-decoration: none;
+                    @include text($fz-text-sx, $fw-text-semiBold,  $c1-text);
+                    display: inline-block;
+                    padding: 5px 15px;
+                    margin-right: 25px;
+                    position: relative;
+                    &:hover{
+                        color: $c3-text;
+                        &::after{
+                            display: block;
+                            transform: scale(1.5, 1.5);
+                            transition:0.5s ease all;
+                        }
+                    }
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        width: 8px;
+                        height: 8px;
+                        display: block;
+                        background-color: $c1-bg;
+                        border-radius: 50%;
+                        bottom: -20px;
+                        left: 50%;
+                        margin-left: -4px;
+                        display: none;
+                        transform: scale(1, 0);
+                        z-index: 5;
+                    }
+                }
+            }
+            .btnHeader{
+                @include button($c1-bg, $c1-border solid 1px, 25px, $fz-text-sm, $fw-text-semiBold, $c2-text, 10px 20px, $c2-bg, $c3-text);
+                margin-right: 20px;
+                transition: all 0.3s linear;
+            }
+            .social-media{
+                a{
+                    color: $c1-text;
+                    i{
+                        font-size: $fz-text-sx;
+                        margin: 0 3px;
+                        &:hover{
+                            color: $c3-text;
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: 992px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.carousel{
+    background: url(../../Images/yellow_top_wave_01.png);
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    .container{
+        padding: 100px 40px 15px 40px;
+        .row{
+            align-items: center;
+            @media screen and (max-width: 992px) {
+                display: block;
+            }
+            .col{
+                width: 50%;
+                .item{
+                    padding: 30px 5px;
+                    .text{
+                        animation: fadeInLeft 1s;
+                        h3{
+                            @include text($fz-text-lg, $fw-text-semiBold, $c3-text);
+                        }
+                        h1{
+                            @include text($fz-text-4xl, $fw-text-semiBold, $c1-text);
+                        }
+                    }
+                    img{
+                        animation:fadeInRight 1s;
+                        width: 100%;
+                    }
+                }
+                @media screen and (max-width: 992px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .bottom-cover-img{
+        img{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    }
+}
+
+.our-teacher{
+    background-color: $c3-bg;
+    background-image: url(../../Images/Wave_White_bottom_right_shape_01.png);
+    background-position: bottom center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    .container{
+        padding: 0 40px;
+        .row{
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            .col{
+                width: 25%;
+                padding: 0;
+                margin: 20px;
+                @for $i from 0 to 5 {
+                    .item-#{$i}{
+                        animation-name: fadeInLeft;
+                        animation-duration: ($i + 1) * 0.5s;
+                        animation-delay: ($i + 0) * 0.5s;
+                    }
+                }
+                .item{
+                    border-radius: 10px;
+                    &:hover{
+                        box-shadow: 0px 15px 10px 0px $c4-bg;
+                        transition: all 0.3s;
+                    }
+                    .top{
+                        overflow: hidden;
+                        border-radius: 10px 10px 0 0;
+                        img{
+                            width: 100%;
+                            border-radius: 10px 10px 0 0;
+                            transform: scale(1, 1);
+                            &:hover{
+                                transform: scale(1.05, 1.05);
+                                transition: all 0.5s;
+                            }
+                        }
+                    }
+                    .bottom{
+                        background-color: $c2-bg;
+                        text-align: center;
+                        border-radius: 0 0 10px 10px;
+                        padding-bottom: 20px;
+                        span{
+                            @include text($fz-text-ssx, $fw-text-semiBold, $c3-text);
+                            display: inline-block;
+                            margin-top: 25px;
+                        }
+                        h5{
+                            font-weight: 600;
+                            margin-top: 10px;
+                        }
+                        p{
+                            font-size: $fz-text-sm;
+                            margin: 15px 20px;
+                        }
+                    }
+                }
+                @media screen and (max-width: 992px) {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+.register{
+    background-image: url(../../Images/accent_bottom_wave_01.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    .container{
+        padding: 15px 40px;
+        .row{
+            padding-top: 80px;
+            align-items: center;
+            @media screen and (max-width: 992px) {
+                display: block;
+            }
+            .col{
+                width: 50%;
+                .item{
+                    img{
+                        animation: fadeInLeft 1s;
+                        width: 100%;
+                        margin: 25px 0 25px 30px;
+                    }
+                    form{
+                        background-color: $c2-bg;
+                        width: 75%;
+                        box-shadow: -5px 0px 10px 0px $c4-bg;
+                        border-radius: 10px;
+                        padding-bottom: 80px;
+                        animation: fadeInRight 1s;
+                        .top{
+                            h1{
+                                text-align: center;
+                                font-weight: 600;
+                                padding-top: 30px;
+                            }
+                        }
+                        .boby{
+                            margin-top: 40px;
+                            .row-input{
+                                display: flex;
+                                margin-bottom: 15px;
+                                .btnName, .btnEmail{
+                                    border: solid 1px $c4-bg;
+                                    border-radius: 25px;
+                                    padding: 10px;
+                                    width: 37%;
+                                    input{
+                                        width: 70%;
+                                        border: none;
+                                        margin-left: 10px;
+                                        font-size: $fz-text-sx;
+                                    }
+                                }
+                                .btnName{
+                                    margin-left: 50px;
+                                }
+                                .btnEmail{
+                                    margin-right: 50px;
+                                }
+                                .btnDetail{
+                                    border: solid 1px $c4-bg;
+                                    border-radius: 25px;
+                                    padding: 10px;
+                                    width: 100%;
+                                    margin: 0 50px;
+                                    select, textarea{
+                                        width: 90%;
+                                        border: none;
+                                        font-size: $fz-text-sx;
+                                    }
+                                    select{
+                                        display: inline-block;
+                                    }
+                                    .fa-message{
+                                        transform: translateY(-80px);
+                                    }
+                                }
+                            }
+                            i{
+                                color: $c3-text;
+                            }
+                        }
+                        .bottom{
+                            margin: 50px 50px 0 50px;
+                            button{
+                                @include button($c1-bg, $c1-border solid 1px, 25px, $fz-text-sm, $fw-text-semiBold, $c2-text, 10px 50px, $c2-bg, $c3-text);
+                                @media screen and (max-width: 992px) {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        @media screen and (max-width: 992px) {
+                            width: 100%;
+                        }
+                    }
+                }
+                @media screen and (max-width: 992px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.footer{
+    background-image: url(../../Images/footer_background.jpg);
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $c5-bg;
+    .container{
+        padding: 15px 45px;
+        .row{
+            color: $c2-text;
+            padding-top: 100px;
+            padding-bottom: 110px;
+            .col{
+                width: 25%;
+                @for $i from 0 to 5 {
+                    .item-#{$i}{
+                        animation-name: fadeInLeft;
+                        animation-duration: ($i + 1) * 0.5s;
+                        animation-delay: ($i + 0) * 0.5s;
+                    }
+                }
+                .item{
+                    h4{
+                        color: $c2-text;
+                        font-weight: 600;
+                        margin-bottom: 30px;
+                    }
+                    .contact-row span{
+                        margin-left: 10px;
+                    }
+                    .social-media{
+                        margin-top: 30px;
+                        a{
+                            i{
+                                color: $c2-text;
+                                margin-right: 15px;
+                                &:hover{
+                                    color: $c1-text;
+                                }
+                            }
+                        }
+                    }
+                    ul{
+                        list-style: none;
+                            a{
+                                text-decoration: none;
+                                color: $c2-text;
+                                &:hover{
+                                    opacity: 0.7;
+                                }
+                            }
+                    }
+                    form{
+                        input{
+                            color: $c2-text;
+                            border-radius: 25px;
+                            border: solid 1px $c4-bg;
+                            font-size: $fz-text-sm;
+                            text-align: center;
+                            padding: 10px 30px;
+                            margin-bottom: 10px;
+                        }
+                        .btnSubmit{
+                            text-align: center;
+                            margin-bottom: 10px;
+                            @include button($c2-bg, $c2-border solid 1px, 25px, $fz-text-sx, $fw-text-semiBold, $c1-text, 10px 80px, $c5-bg, $c2-text);
+                        }
+                    }
+                    @media screen and (max-width: 992px) {
+                        font-size: $fz-text-sm;
+                    }
+                }
+                @media screen and (max-width: 992px) {
+                    flex-basis: auto;
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeInLeft {
+    0%{
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes fadeInRight {
+    0%{
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
